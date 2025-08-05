@@ -1,32 +1,29 @@
-def calculadora():
-    print(" Calculadora Básica ")
+def calculator():
+print("Calculator")
 
-   
-    try:
-        num1 = float(input("Digite o primeiro número: "))
-        num2 = float(input("Digite o segundo número: "))
-    except ValueError:
-        print("Por favor, insira apenas números válidos.")
-        return operacao = input("Escolha a operação (+, -, *, /): ")
+try:
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+except ValueError:
+print("Please enter only valid numbers.")
+return operation = input("Choose the operation (+, -, *, /): ")
 
-   
-    if operacao == "+":
-        resultado = num1 + num2
-        print(f"{num1} + {num2} = {resultado}")
-    elif operacao == "-":
-        resultado = num1 - num2
-        print(f"{num1} - {num2} = {resultado}")
-    elif operacao == "*":
-        resultado = num1 * num2
-        print(f"{num1} * {num2} = {resultado}")
-    elif operacao == "/":
-        if num2 != 0:
-            resultado = num1 / num2
-            print(f"{num1} / {num2} = {resultado}")
-        else:
-            print("Erro: Divisão por zero não é permitida.")
-    else:
-        print("Operação inválida. Por favor, use +, -, * ou /.")
+if operation == "+":
+result = num1 + num2
+print(f"{num1} + {num2} = {result}")
+elif operation == "-":
+result = num1 - num2
+print(f"{num1} - {num2} = {result}")
+elif operation == "*":
+result = num1 * num2
+print(f"{num1} * {num2} = {result}")
+elif operation == "/":
+if num2 != 0:
+result = num1 / num2
+print(f"{num1} / {num2} = {result}")
+else:
+print("Error: Division by zero is not allowed.")
+else:
+print("Invalid operation. Please use +, -, *, or /.")
 
-
-calculadora()
+calculator()
